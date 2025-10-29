@@ -23,13 +23,14 @@ namespace ecommerce.Services
 
         public async Task<AuthResponse> RegisterAsync(RegisterRequest request)
         {
-            var existing = await _repo.GetByEmailAsync(request.Email);
+            var email = request.Email.ToLowerInvariant();
+            var existing = await _repo.GetByEmailAsync(email);
             if (existing != null) throw new ApplicationException("Email already in use");
 
             var user = new User
             {
                 FullName = request.FullName,
-                Email = request.Email.ToLowerInvariant(),
+                Email = email,
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword(request.Password),
                 Role = "User",
                 CreatedAt = DateTime.UtcNow
@@ -58,9 +59,10 @@ namespace ecommerce.Services
             var key = jwtSection.GetValue<string>("Key");
             var issuer = jwtSection.GetValue<string>("Issuer");
             var audience = jwtSection.GetValue<string>("Audience");
-            var expiresMinutes = jwtSection.GetValue<int>("ExpiresMinutes");
+                        var expiresMinutes = jwtSection.GetValue<int>("ExpiresMinutes"); // keep reading ExpiresMinutes
 
             var tokenHandler = new JwtSecurityTokenHandler();
+            if (string.IsNullOrWhiteSpace(key)) throw new ApplicationException("JWT Key not configured");
             var tokenKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(key));
             var creds = new SigningCredentials(tokenKey, SecurityAlgorithms.HmacSha256);
 
@@ -69,7 +71,9 @@ namespace ecommerce.Services
         new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
         new Claim(JwtRegisteredClaimNames.Email, user.Email),
         new Claim(ClaimTypes.Name, user.FullName),
-        new Claim(ClaimTypes.Role, user.Role)
+                new Claim(ClaimTypes.Role, user.Role),
+                // also include NameIdentifier so controllers using ClaimTypes.NameIdentifier can read the user id
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
       };
 
             var token = new JwtSecurityToken(

@@ -23,7 +23,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__DefaultConnection=server=mysql;port=3306;database=authdb;user=authuser;password=authpass
-      - Jwt__Key=UnaClaveSecretaMuySegura
+      - Jwt__Key=ClaveSuperSecretaMuyLarga_2025_ChangeThisToAStrong32+CharKey
       - Jwt__Issuer=AuthApi
       - Jwt__Audience=AuthApiUsers
       - Jwt__ExpiresMinutes=60

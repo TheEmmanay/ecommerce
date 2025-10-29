@@ -15,7 +15,7 @@ INSERT INTO Users (FullName, Email, PasswordHash, Role, CreatedAt)
 VALUES (
   'Administrador',
   'admin@example.com',
-  '$2a$11$Wq58CyOPmYUz2nFqVsa8L.9ePXR6XfXH8nZQvDFFgbN.7hAqxS9Si', -- hash de "admin123"
+  '$2a$11$KFmAHY6VaMd4vNaFZm8E6eR98u5svtqvE8PdEu5StXcYUDMv2N5Ri', -- hash de "admin123"
   'Admin',
   NOW()
 );
