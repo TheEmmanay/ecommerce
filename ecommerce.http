@@ -1,0 +1,6 @@
+@ecommerce_HostAddress = http://0.0.0.0:8080
+
+POST {{ecommerce_HostAddress}}/api/auth/login
+Accept: application/json
+
+###
