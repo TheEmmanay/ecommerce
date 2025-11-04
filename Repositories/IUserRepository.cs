@@ -8,5 +8,10 @@ namespace ecommerce.Repositories
         Task<User> GetByIdAsync(int id);
         Task AddAsync(User user);
         Task SaveChangesAsync();
+
+        Task<IEnumerable<User>> GetAllAsync();
+        Task UpdateAsync(User user);
+        Task DeleteAsync(int id);
+
     }
 }

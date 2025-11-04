@@ -25,12 +25,6 @@ namespace ecommerce.Controllers
             }
         }
 
-        [HttpGet("hello")]
-        public async Task<IActionResult> Hello()
-        {
-            return Ok("Hello World");
-        }
-
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequest request)
         {

@@ -173,3 +173,15 @@ C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\bin\Release\net9.0\ou
 C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\bin\Release\net9.0\out\out\out\out\out\ecommerce.deps.json
 C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\bin\Release\net9.0\out\out\out\out\out\ecommerce.runtimeconfig.json
 C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\bin\Release\net9.0\out\out\out\out\out\ecommerce.staticwebassets.endpoints.json
+C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\bin\Release\net9.0\out\out\out\out\out\out\web.config
+C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\bin\Release\net9.0\out\out\out\out\out\out\appsettings.Development.json
+C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\bin\Release\net9.0\out\out\out\out\out\out\appsettings.json
+C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\bin\Release\net9.0\out\out\out\out\out\out\ecommerce.deps.json
+C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\bin\Release\net9.0\out\out\out\out\out\out\ecommerce.runtimeconfig.json
+C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\bin\Release\net9.0\out\out\out\out\out\out\ecommerce.staticwebassets.endpoints.json
+C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\bin\Release\net9.0\out\out\out\out\out\out\out\web.config
+C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\bin\Release\net9.0\out\out\out\out\out\out\out\appsettings.Development.json
+C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\bin\Release\net9.0\out\out\out\out\out\out\out\appsettings.json
+C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\bin\Release\net9.0\out\out\out\out\out\out\out\ecommerce.deps.json
+C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\bin\Release\net9.0\out\out\out\out\out\out\out\ecommerce.runtimeconfig.json
+C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\bin\Release\net9.0\out\out\out\out\out\out\out\ecommerce.staticwebassets.endpoints.json

@@ -59,7 +59,7 @@ namespace ecommerce.Services
             var key = jwtSection.GetValue<string>("Key");
             var issuer = jwtSection.GetValue<string>("Issuer");
             var audience = jwtSection.GetValue<string>("Audience");
-                        var expiresMinutes = jwtSection.GetValue<int>("ExpiresMinutes"); // keep reading ExpiresMinutes
+            var expiresMinutes = jwtSection.GetValue<int>("ExpiresMinutes"); // keep reading ExpiresMinutes
 
             var tokenHandler = new JwtSecurityTokenHandler();
             if (string.IsNullOrWhiteSpace(key)) throw new ApplicationException("JWT Key not configured");
@@ -67,21 +67,21 @@ namespace ecommerce.Services
             var creds = new SigningCredentials(tokenKey, SecurityAlgorithms.HmacSha256);
 
             var claims = new List<Claim>
-      {
-        new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-        new Claim(JwtRegisteredClaimNames.Email, user.Email),
-        new Claim(ClaimTypes.Name, user.FullName),
-                new Claim(ClaimTypes.Role, user.Role),
-                // also include NameIdentifier so controllers using ClaimTypes.NameIdentifier can read the user id
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
-      };
+        {
+            new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+            new Claim(JwtRegisteredClaimNames.Email, user.Email),
+            new Claim(ClaimTypes.Name, user.FullName),
+                    new Claim(ClaimTypes.Role, user.Role),
+                    // also include NameIdentifier so controllers using ClaimTypes.NameIdentifier can read the user id
+                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
+        };
 
             var token = new JwtSecurityToken(
-              issuer: issuer,
-              audience: audience,
-              claims: claims,
-              expires: DateTime.UtcNow.AddMinutes(expiresMinutes),
-              signingCredentials: creds
+                issuer: issuer,
+                audience: audience,
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(expiresMinutes),
+                signingCredentials: creds
             );
 
             var tokenString = tokenHandler.WriteToken(token);
