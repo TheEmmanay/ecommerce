@@ -71,9 +71,11 @@ namespace ecommerce.Services
             new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
             new Claim(JwtRegisteredClaimNames.Email, user.Email),
             new Claim(ClaimTypes.Name, user.FullName),
-                    new Claim(ClaimTypes.Role, user.Role),
-                    // also include NameIdentifier so controllers using ClaimTypes.NameIdentifier can read the user id
-                    new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
+            // include both ClaimTypes.Role (long URI) and short "role" claim to maximize compatibility
+            new Claim(ClaimTypes.Role, user.Role),
+            new Claim("role", user.Role),
+            // also include NameIdentifier so controllers using ClaimTypes.NameIdentifier can read the user id
+            new Claim(ClaimTypes.NameIdentifier, user.Id.ToString())
         };
 
             var token = new JwtSecurityToken(

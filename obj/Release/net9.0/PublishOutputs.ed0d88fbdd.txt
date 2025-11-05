@@ -1,4 +1,5 @@
 C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\out\ecommerce.exe
+C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\out\out\out\out\out\out\out\out\out\web.config
 C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\out\out\out\out\out\out\out\out\web.config
 C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\out\out\out\out\out\out\out\web.config
 C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\out\out\out\out\out\out\web.config
@@ -43,6 +44,11 @@ C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\out\out\out\out\out\o
 C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\out\out\out\out\out\out\out\out\ecommerce.deps.json
 C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\out\out\out\out\out\out\out\out\ecommerce.runtimeconfig.json
 C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\out\out\out\out\out\out\out\out\ecommerce.staticwebassets.endpoints.json
+C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\out\out\out\out\out\out\out\out\out\appsettings.Development.json
+C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\out\out\out\out\out\out\out\out\out\appsettings.json
+C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\out\out\out\out\out\out\out\out\out\ecommerce.deps.json
+C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\out\out\out\out\out\out\out\out\out\ecommerce.runtimeconfig.json
+C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\out\out\out\out\out\out\out\out\out\ecommerce.staticwebassets.endpoints.json
 C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\out\ecommerce.dll
 C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\out\ecommerce.runtimeconfig.json
 C:\Users\Emma\Desktop\ing\backend\proyectos .net\ecommerce\out\ecommerce.pdb

@@ -2,11 +2,13 @@ using ecommerce.Data;
 using ecommerce.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-namespace ecommerce.Controllers
+using Microsoft.AspNetCore.Authorization;
 
+namespace ecommerce.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize(Roles = "Admin")] // Requiere Admin por defecto para todas las acciones
     public class ProductsController : ControllerBase
     {
         private readonly AppDbContext _context;
@@ -18,6 +20,7 @@ namespace ecommerce.Controllers
 
         // GET: api/products
         [HttpGet]
+        [AllowAnonymous] // Permitir acceso público a este GET
         public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
         {
             return await _context.Products.ToListAsync();
@@ -25,6 +28,7 @@ namespace ecommerce.Controllers
 
         // GET: api/products/5
         [HttpGet("{id}")]
+        [AllowAnonymous] // Permitir acceso público a este GET
         public async Task<ActionResult<Product>> GetProduct(int id)
         {
             var product = await _context.Products.FindAsync(id);
