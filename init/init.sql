@@ -10,6 +10,13 @@ CREATE TABLE IF NOT EXISTS Users (
   CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE TABLE IF NOT EXISTS Products (
+  Id INT AUTO_INCREMENT PRIMARY KEY,
+  Name VARCHAR(100) NOT NULL,
+  Price INT NOT NULL,
+  Description VARCHAR,
+  CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP
+);
 -- Usuario inicial (admin)
 INSERT INTO Users (FullName, Email, PasswordHash, Role, CreatedAt)
 VALUES (
@@ -17,5 +24,12 @@ VALUES (
   'admin@example.com',
   '$2a$11$KFmAHY6VaMd4vNaFZm8E6eR98u5svtqvE8PdEu5StXcYUDMv2N5Ri', -- hash de "admin123"
   'Admin',
+  NOW()
+);
+INSERT INTO Products (Name, Price, Description, CreatedAt)
+VALUES (
+  'Cafe Instantaneo',
+  16000,
+  'Cafe instantaneo colcafe',
   NOW()
 );
